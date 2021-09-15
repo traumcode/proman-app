@@ -1,0 +1,421 @@
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+body {
+    /*height: 110vh;*/
+    background-color: #222222;
+    color:white;
+    overflow-y: scroll;
+}
+
+#boards {
+    /*background-color: #f8f8f8;*/
+    background-color: black;
+    color: #f8f8f8;
+    padding: 20px;
+    /*min-width: 90%;*/
+}
+
+
+.card {
+    position: relative;
+    /*min-width: 8rem;*/
+    /*padding: 0.5rem;*/
+
+    width: 100%;
+    margin-top: 4px;
+    animation-name: modalopen, cardHeightAnimation, blackToWhiteFont;
+    animation-duration: 0.3s, 0.3s, 0.3s;
+    animation-delay: 0s, 0.1s, 0.1s;
+    animation-fill-mode: both;
+    background-color: black;
+    color: #f8f8f8;
+    cursor: pointer;
+}
+
+.my-card-form {
+    margin-top: 4px;
+    /*padding:4px 0;*/
+    width: 100%;
+}
+
+h2.darkned form.my-card-form {
+    /*margin-top: 4px;*/
+    /*background-color: #dddddd;*/
+    padding:8px 0;
+    width: 20%;
+    margin: 0 auto;
+
+}
+h2.darkned form.my-card-form input {
+    text-align: center;
+}
+.update-card {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+i {
+    color: white;
+    font-size: 0.8rem;
+}
+
+
+.button-card-delete {
+    /*position: relative;*/
+    /*padding: 0px 6px 3px 6px;*/
+
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: -7px;
+    z-index: 10;
+}
+
+.card:hover {
+    background-color: #323030;
+}
+.card:hover .button-card-delete {
+    display: block;
+}
+
+.column-header-container.card {
+    border-radius: 0px;
+}
+
+.column-header-container.card:hover {
+    background-color: transparent;
+}
+
+h2 button {
+    background-color: black;
+    color: #f8f8f8;
+}
+
+.accordion-button {
+    display: block;
+    background-color: black;
+    color: #f8f8f8;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.accordion-button:hover {
+    background-color: rgba(22, 22, 22, 0.45);
+}
+
+.btn.btn-light:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: #f8f8f8;
+}
+
+/*accordion-collapse.collapse.show {*/
+/*    animation-name: heightAnimation;*/
+/*    animation-duration: 1s;*/
+/*    animation-delay: 1s;*/
+/*    animation-timing-function: ease-in;*/
+/*}*/
+
+.accordion-body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-grow: 0 ;
+    /*align-items: center;*/
+    /*overflow-x: scroll;*/
+
+    min-height: 30vh;
+    width: 100%;
+    background-color: black;
+}
+
+.column-content {
+    animation-name: heightAnimation, modalopen;
+    width: 260px;
+    padding: 0.8rem;
+    padding-bottom: 50px;
+    display:flex;
+    flex-direction: column;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-duration: 1s, 0.3s;
+    min-width: 12rem;
+    /*min-height: 25vh;*/
+    background-color: #f8f8f8;
+
+}
+
+div.status-column h4 {
+    position: absolute;
+    margin: 0;
+    top: 2px;
+
+    background-color: #111111;
+    text-align: center;
+    font-weight: lighter;
+    animation-name: modalopen;
+    animation-duration: 1s;
+    /*animation-delay: 0.25s;*/
+    animation-fill-mode: both;
+}
+
+.status-column {
+    margin: 0.5em 0.5em;
+}
+
+/*.accordion-body {*/
+/*    min-height: 30vh;*/
+/*    width: 100%;*/
+/*    background-color: black;*/
+/*    overflow-x: paged-x;*/
+/*}*/
+
+
+#page-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.add-col-btn {
+    /*min-height: 100px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 20px;*/
+    padding-bottom: 20px;
+    background-color:black;
+    /*width: auto;*/
+}
+
+/*.add-col-btn button,*/
+/*.add-col-btn button.btn-light,*/
+/*.add-col-btn form {*/
+
+/*    animation-name: modalopen;*/
+/*    animation-fill-mode: both;*/
+/*    animation-duration: 1s;*/
+/*}*/
+
+.display-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container-modal-form {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-modal-form div form input,
+.container-modal-form button {
+    margin-right: 10px;
+}
+
+.flex-add-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.flex-center-middle {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*.form-flex {*/
+/*    display:block;*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*}*/
+
+.add-card-modal {
+    position: relative;
+}
+
+.add-card-modal form {
+    position:absolute;
+    top:0;
+    right:0;
+}
+.add-card-modal form button {
+    /*width: 20%;*/
+    margin-left: 5px;
+}
+
+form {
+    display:block;
+        /*min-height: 100px;*/
+
+}
+
+.btn-success {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.signing-btn {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.registration-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.addCard {
+    /*margin-bottom: 20px;*/
+    min-height: 40px;
+}
+
+.column-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #444444;
+    padding: 0.5rem;
+}
+
+.board-buttons-div {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+        /*display:block;*/
+      opacity: 1;
+    }
+  }
+
+
+@keyframes heightAnimation {
+    from {
+      min-height: 0;
+        /*padding-bottom: 0;*/
+    }
+    to {
+        /*padding-bottom: 20%;*/
+      min-height: 25vh;
+        /*min-height: auto;*/
+    }
+  }
+@keyframes cardHeightAnimation {
+    from {
+        /*color: black;*/
+      min-height: 0;
+        /*opacity:0;*/
+        /*padding-bottom: 0;*/
+    }
+    to {
+        /*color: white;*/
+        /*padding-bottom: 20%;*/
+        min-height: calc(2.5em);
+        /*opacity:1;*/
+        /*min-height: auto;*/
+    }
+  }
+@keyframes blackToWhiteFont {
+    from {
+        /*font-size: 0;*/
+        /*line-height: calc(0.1rem);*/
+        padding: calc(0.1rem);
+        color: transparent;
+
+        /*padding-bottom: 0;*/
+    }
+    to {
+        padding: calc(0.5rem);
+        /*line-height: calc(1.2rem);*/
+        /*font-size: calc(1rem);*/
+        color: white;
+        /*padding-bottom: 20%;*/
+
+        /*min-height: auto;*/
+    }
+  }
+
+/*DRAGGABLE*/
+[draggable="true"] {
+    user-select: none;
+}
+.empty {
+    border: none;
+    background-color: transparent;
+}
+
+.hold {
+    /*border: 5px solid #cac6c6;*/
+    border: 5px solid green;
+}
+
+.hovered {
+    /*background-color: #cac6c6;*/
+    background-color: red;
+    /*border: 5px dashed rgb(63, 60, 236);*/
+}
+
+.invisible {
+    display: none;
+}
+
+.signing-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sign-dialogue {
+    background-color: #bebebe;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.signing {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+input.signing {
+    border: 1px solid #5a5a5a;
+}
